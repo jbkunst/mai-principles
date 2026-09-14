@@ -4,6 +4,14 @@ My principles for working with AI agents and coding assistants.
 
 These are defaults, not a universal project template. Project-specific instructions should adapt them to the work at hand and override them when there is a concrete reason.
 
+## What belongs here
+
+**If a statement would not change a reasonable agent's decision, it probably does not belong here.**
+
+Treat this as the editorial rule for mAI. This repository captures deliberate preferences, trade-offs, and decision biases — not generic best practices or advice that a competent agent should already follow.
+
+When in doubt, leave something out. Add it later only if experience shows that making the preference explicit changes the resulting work.
+
 ## Principles
 
 ### 1. Start simple. Stay simple.
