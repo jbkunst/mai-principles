@@ -4,6 +4,32 @@ My principles for working with AI agents and coding assistants.
 
 These are defaults, not a universal project template. Project-specific instructions should adapt them to the work at hand and override them when there is a concrete reason.
 
+## How to use this repository
+
+When asked to use mAI in a project:
+
+1. Read these general principles.
+2. Read the relevant guide under `domains/`, if one exists.
+3. Understand the project's existing `README.md`, agent instructions, and only the structure needed for the task.
+4. Adapt the project's instructions to these principles instead of copying mAI wholesale.
+5. Preserve useful project-specific rules, architecture, and conventions.
+6. Do not change application code or project architecture merely to conform to mAI.
+7. Prefer the smallest useful change.
+
+Use this priority when guidance conflicts:
+
+**project-specific constraints → relevant mAI domain guidance → general mAI principles**
+
+### Quick prompts
+
+For an existing project:
+
+> Read `https://github.com/jbkunst/mai-principles` and apply its usage instructions to this project. Review the current project instructions and adapt them with the smallest useful changes.
+
+For a new project:
+
+> Read `https://github.com/jbkunst/mai-principles` and apply its usage instructions to this project. Create the smallest useful project-specific agent instructions.
+
 ## What belongs here
 
 **If a statement would not change a reasonable agent's decision, it probably does not belong here.**
@@ -50,28 +76,12 @@ Do part of the thinking and decision-making instead of returning the whole decis
 
 When a recommendation is requested, give the best recommendation first and explain why. Mention alternatives only when they materially change the decision or expose an important trade-off. Do not replace a useful answer with a long menu of possibilities.
 
-## Using these principles
+## Project-specific guidance
 
-The principles are intentionally general. A project's `AGENTS.md`, `CLAUDE.md`, or equivalent should translate them into concrete instructions for that repository instead of copying this document wholesale.
+The principles are intentionally general. A project's `AGENTS.md`, `CLAUDE.md`, or equivalent should translate them into concrete instructions for that repository.
 
 Project-specific instructions should contain what is genuinely local: architecture, domain constraints, commands, validation, data rules, deployment details, coding conventions, and boundaries that cannot be inferred from the project itself.
 
 Recurring framework or domain guidance can live under `domains/`. These notes should remain concise and translate the general principles into practices that are specific enough to be useful but broad enough to reuse across projects.
-
-### Starting a new project
-
-Ask the agent to read these principles, inspect the new project's purpose and initial structure, and create the smallest useful project-specific instructions.
-
-A useful request is:
-
-> Read `https://github.com/jbkunst/mai-principles` as my general working principles. Inspect this project and create a minimal `AGENTS.md` that adapts them to the project and documents only the conventions and constraints that are actually needed. Start simple and do not invent structure for possible future needs.
-
-### Adapting an existing project
-
-Do not ask the agent to restructure the project to match this repository. Ask it to understand the existing project first and adapt its instructions while preserving useful local decisions.
-
-A useful request is:
-
-> Read `https://github.com/jbkunst/mai-principles` as my general working principles. Then review this project's `README.md`, `AGENTS.md` or equivalent, and the relevant structure. Propose the smallest changes needed for the project instructions to reflect these principles while preserving project-specific rules and avoiding unrelated code or architecture changes.
 
 The goal is not uniform repositories. The goal is consistent working principles expressed appropriately for each project.
