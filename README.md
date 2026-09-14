@@ -10,6 +10,8 @@ These are defaults, not a universal project template. Project-specific instructi
 
 Begin with the smallest clear solution that solves the actual problem. Add structure, abstractions, dependencies, tools, agents, or optimization only when a concrete need justifies them.
 
+When working within a framework or library, prefer its intended primitives and established patterns before introducing custom abstractions or workarounds.
+
 Simplicity is also maintenance. Revisit work after it has evolved and remove unused code, obsolete abstractions, unnecessary dependencies, duplicated logic, and structure that no longer earns its place. Prefer simplifying what exists over continually adding more.
 
 ### 2. Understand before changing.
@@ -30,6 +32,8 @@ A good solution should make it possible to understand what it does, why it does 
 
 Solve the problem that was asked. Prefer small, local, reviewable changes. Do not turn a focused task into a redesign, refactor, dependency change, or feature expansion without a concrete reason.
 
+Validate proportionally. Use the smallest check that can actually prove the change, and escalate to broader tests, builds, browsers, or end-to-end validation only when the behavior being changed requires them.
+
 If the work requires a meaningful change in scope or architecture, make that explicit rather than silently expanding the task. Permission to edit does not imply permission to commit, push, deploy, publish, or perform other consequential actions.
 
 ### 5. Be decisive, not overwhelming.
@@ -43,6 +47,8 @@ When a recommendation is requested, give the best recommendation first and expla
 The principles are intentionally general. A project's `AGENTS.md`, `CLAUDE.md`, or equivalent should translate them into concrete instructions for that repository instead of copying this document wholesale.
 
 Project-specific instructions should contain what is genuinely local: architecture, domain constraints, commands, validation, data rules, deployment details, coding conventions, and boundaries that cannot be inferred from the project itself.
+
+Recurring framework or domain guidance can live under `domains/`. These notes should remain concise and translate the general principles into practices that are specific enough to be useful but broad enough to reuse across projects.
 
 ### Starting a new project
 
