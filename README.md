@@ -16,6 +16,8 @@ When asked to use mAI in a project:
 6. Do not change application code or project architecture merely to conform to mAI.
 7. Prefer the smallest useful change.
 
+Keep always-on instructions small. Link to task-specific guidance and state when to read it; do not require loading every reference for every task.
+
 Use this priority when guidance conflicts:
 
 **project-specific constraints → relevant mAI domain guidance → general mAI principles**
@@ -36,7 +38,7 @@ For a new project:
 
 Treat this as the editorial rule for mAI. This repository captures deliberate preferences, trade-offs, and decision biases — not generic best practices or advice that a competent agent should already follow.
 
-When in doubt, leave something out. Add it later only if experience shows that making the preference explicit changes the resulting work.
+When in doubt, leave something out. Add it later only if experience shows that making the preference explicit changes the resulting work. Before adding a rule, check whether clarifying or replacing an existing one solves the problem.
 
 ## Principles
 
