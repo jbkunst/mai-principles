@@ -39,7 +39,7 @@ When a module is justified, use Shiny's namespacing and module interfaces instea
 
 ## Validate with the smallest test that proves the change
 
-Do not run the whole app, a browser, or the full test suite by default for every change.
+Follow the README's lightweight-script default: run the complete script after relevant code changes while it remains fast and self-contained. Add session, browser, or broader checks only when relevant behavior is not covered.
 
 Use this escalation path:
 
