@@ -66,7 +66,7 @@ A good solution should make it possible to understand what it does, why it does 
 
 Solve the problem that was asked. Prefer small, local, reviewable changes. Do not turn a focused task into a redesign, refactor, dependency change, or feature expansion without a concrete reason.
 
-Validate proportionally. Use the smallest check that can actually prove the change, and escalate to broader tests, builds, browsers, or end-to-end validation only when the behavior being changed requires them.
+Validate proportionally. For apps and small projects, prefer a lightweight validation script as the starting point: one command, a clean session, synthetic data, and explicit assertions covering important workflows without live service calls. Run the complete script after relevant code changes while it remains fast and self-contained. Add a regression check when introducing behavior or fixing a bug, and document the command and what it checks. Preserve existing tests that work; introduce additional testing infrastructure only when it brings a concrete benefit. Escalate to broader tests, builds, browsers, or live integrations when the changed behavior requires them. Passing the script is not evidence that untested behavior works.
 
 If the work requires a meaningful change in scope or architecture, make that explicit rather than silently expanding the task. Permission to edit does not imply permission to commit, push, deploy, publish, or perform other consequential actions.
 
