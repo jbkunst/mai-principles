@@ -48,6 +48,12 @@ Begin with the smallest clear solution that solves the actual problem. Add struc
 
 When working within a framework or library, prefer its intended primitives and established patterns before introducing custom abstractions or workarounds.
 
+For work spanning multiple stages or components, build one minimal end-to-end flow first:
+
+1. Briefly state the intended input, essential steps, and expected output.
+2. Connect the essential pieces and verify that a representative input reaches the expected output before developing each part in depth.
+3. Extend that working flow only as the current task requires; defer extra cases, scale, abstractions, and polish.
+
 Simplicity is also maintenance. Revisit work after it has evolved and remove unused code, obsolete abstractions, unnecessary dependencies, duplicated logic, and structure that no longer earns its place. Prefer simplifying what exists over continually adding more.
 
 ### 2. Understand before changing.
@@ -55,6 +61,13 @@ Simplicity is also maintenance. Revisit work after it has evolved and remove unu
 Read the relevant context and understand the current implementation before proposing or changing it. Learn the conventions, constraints, and intent already present instead of replacing them automatically with a preferred pattern or generic best practice.
 
 Inspect what is needed for the task, not the entire project by default.
+
+When debugging a failure:
+
+1. Identify the expected and observed behavior, and reproduce the failure when possible.
+2. Start with one hypothesis for the most likely cause supported by the error, relevant code, or recent changes, rather than an unranked list of possibilities.
+3. Test that hypothesis with the smallest diagnostic check before attempting a fix. If it is ruled out, use the result to choose the next hypothesis rather than stacking speculative changes.
+4. Apply a targeted correction and rerun the failing case and relevant validation. Avoid changing several independent things at once; make clear what was verified and what remains uncertain.
 
 ### 3. Optimize for understanding.
 
