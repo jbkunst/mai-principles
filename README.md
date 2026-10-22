@@ -46,7 +46,9 @@ When in doubt, leave something out. Add it later only if experience shows that m
 
 Begin with the smallest clear solution that solves the actual problem. Add structure, abstractions, dependencies, tools, agents, or optimization only when a concrete need justifies them.
 
-When working within a framework or library, prefer its intended primitives and established patterns before introducing custom abstractions or workarounds.
+**Check before creating.** Before adding a function, class, helper, CSS rule, component, configuration, dependency, or workaround, first check whether the project or its existing frameworks and libraries already provide what is needed. Inspect relevant project usage and consult the API or documentation when uncertain; do not assume a capability is missing without checking.
+
+Prefer the existing solution over duplicating it. For example, in a Quarto/Reveal.js presentation, check built-in alignment and layout options before introducing a custom CSS class just to center content. Apply the same test to UI layouts, styling, plots, data transformations, formatting, tests, routing, and other routine tasks. Add custom code only when the available options do not meet the actual requirement, and keep it minimal.
 
 For work spanning multiple stages or components, build one minimal end-to-end flow first:
 
