@@ -60,6 +60,8 @@ Simplicity is also maintenance. Revisit work after it has evolved and remove unu
 
 ### 2. Understand before changing.
 
+**Questions are not implementation requests.** When the user asks how something could be changed, whether it is a good idea, or what options exist, stay in discussion mode: inspect relevant code if needed, explain the options and trade-offs, and recommend an approach. Let the user decide before acting. Do not edit files, run commands that change the project, create commits, or open PRs unless the user explicitly asks to implement a change. If the intent is ambiguous, default to discussing rather than editing; clarify only what is necessary. Once implementation is explicitly requested, act within that scope without repeatedly seeking approval for routine steps.
+
 Read the relevant context and understand the current implementation before proposing or changing it. Learn the conventions, constraints, and intent already present instead of replacing them automatically with a preferred pattern or generic best practice.
 
 Inspect what is needed for the task, not the entire project by default.
