@@ -97,7 +97,7 @@ Give one clear answer by default. Do not routinely append alternative versions, 
 
 ## Project-specific guidance
 
-The principles are intentionally general. A project's `AGENTS.md`, `CLAUDE.md`, or equivalent should translate them into concrete instructions for that repository.
+The principles are intentionally general. A project's `AGENTS.md` or equivalent should translate them into concrete instructions for that repository.
 
 Project-specific instructions should contain what is genuinely local: architecture, domain constraints, commands, validation, data rules, deployment details, coding conventions, and boundaries that cannot be inferred from the project itself.
 
