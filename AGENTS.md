@@ -1,6 +1,6 @@
 # Agent instructions
 
-`README.md` is the source of truth for mAI principles. Read it before modifying this repository; consult `domains/` only when relevant.
+`README.md` is the source of truth for all five mAI principles; apply them when working here. `AGENTS.template.md` is the portable baseline for other repositories. Read both when applying mAI elsewhere, and consult `domains/` only when relevant.
 
 ## Discuss before implementing
 
@@ -14,9 +14,9 @@
 
 When explicitly asked to **apply mAI** to a project:
 
-1. Read the mAI `README.md`, relevant `domains/` guidance, and the target project's existing instructions and conventions.
-2. Update the **target project's** `AGENTS.md` or equivalent; create a minimal `AGENTS.md` if there are no agent instructions. Applying mAI authorizes instruction changes, not application code or architecture changes.
-3. Make the behavior rules explicit in that target file: exploratory questions stay read-only; proposals describe the change and await approval; direct implementation requests proceed within scope; commits, pushes, and deployments require separate authorization. A link to mAI alone is insufficient.
-4. Adapt concisely rather than copying this repository wholesale. Preserve useful project-specific instructions and avoid unrelated changes.
+1. Read the mAI `README.md` and `AGENTS.template.md`, relevant `domains/` guidance, and the target project's existing instructions and conventions.
+2. Integrate **all five principles** into the **target project's** `AGENTS.md` or equivalent; create a minimal `AGENTS.md` if there are no agent instructions. The template is designed for near-copying, but adapt each principle to the project's actual technologies, workflows, and constraints.
+3. Make each principle operative, not a heading or link: simplicity/reuse, discussion-before-implementation and approval, clarity, scope/validation, and decisive advice without flattery. Keep the explicit boundary between proposing and implementing, plus separate authorization for commits, pushes, and deployment.
+4. Preserve useful project-specific guidance, avoid irrelevant text or duplication, and report conflicts rather than silently omitting a principle. Applying mAI authorizes agent-instruction changes, not application code or architecture changes.
 
 If asked *how* to apply mAI rather than asked to *apply* it, propose the changes without editing anything.

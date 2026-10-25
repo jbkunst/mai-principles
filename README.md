@@ -8,21 +8,24 @@ These are defaults, not a universal project template. Project-specific instructi
 
 When asked to use mAI in a project:
 
-1. Read these general principles.
+1. Read the general principles in this README and the copy-ready baseline in `AGENTS.template.md`.
 2. Read the relevant guide under `domains/`, if one exists.
-3. Understand the project's existing `README.md`, agent instructions, and only the structure needed for the task.
-4. Update the project's `AGENTS.md` (or the agent-instruction file it actually uses); if none exists, create a minimal `AGENTS.md`. Adapt the relevant principles instead of copying mAI wholesale.
-5. Preserve useful project-specific rules, architecture, and conventions.
-6. Treat a request to "apply mAI" as authorization to adapt agent instructions, **not** to change application code or architecture.
-7. Prefer the smallest useful change.
+3. Understand the target project's existing `README.md`, agent instructions, and only the structure needed for the task.
+4. Merge an **adapted version of all five principles** from `AGENTS.template.md` into the target project's `AGENTS.md` (or its actual agent-instruction file). Create a minimal `AGENTS.md` if none exists.
+5. Keep the substance of each principle explicit and actionable; adjust wording, examples, conventions, and validation to the project. Reuse the template nearly verbatim when appropriate, but do not paste irrelevant instructions, placeholders, or duplicate existing guidance.
+6. Preserve useful project-specific rules, architecture, and conventions. Surface material conflicts instead of silently dropping a principle.
+7. Treat a request to "apply mAI" as authorization to adapt agent instructions, **not** to change application code or architecture. Commits, pushes, publications, and deployments require separate authorization.
+8. Prefer the smallest useful change.
 
-**Adoption means changing future agent behavior, not just linking to this repository.** The target agent instructions must explicitly establish this working boundary:
+**Adoption means changing future agent behavior, not just linking to this repository.** A target project has not adopted mAI until its agent instructions cover **all five principles**:
 
-- **Questions, reviews, and exploratory ideas:** inspect as needed, discuss and recommend, but do not modify the project.
-- **Proposals:** explain what would change, why, and material trade-offs; wait for the user's approval before implementing.
-- **Direct implementation requests:** execute within the approved scope without seeking repeated approval for routine steps. Commits, pushes, publications, and deployments require separate authorization.
+- **Start simple:** use the smallest effective solution; check existing framework and project capabilities before creating new ones.
+- **Understand before changing:** questions and proposals do not authorize implementation; recommend a concrete plan, explain the impact, and wait for approval. Direct implementation requests can proceed within scope.
+- **Optimize for understanding:** favor readable, explainable code and document intent.
+- **Keep scope tight:** avoid unrelated changes and validate proportionally; treat edits, commits, pushes, and deployments as different authorization scopes.
+- **Be decisive, not overwhelming:** give a reasoned recommendation without excessive alternatives, flattery, or condescension.
 
-Do not consider mAI adopted if this distinction exists only here or in an external link. Keep the local instructions short and actionable.
+The target `AGENTS.md` must contain these behaviors, not just a link to mAI. Keep always-on instructions short and retain only relevant, project-specific detail.
 
 Keep always-on instructions small. Link to task-specific guidance and state when to read it; do not require loading every reference for every task.
 
@@ -34,11 +37,11 @@ Use this priority when guidance conflicts:
 
 For an existing project:
 
-> Read `https://github.com/jbkunst/mai-principles` and apply its usage instructions to this project. Update the existing `AGENTS.md` or equivalent (or create a minimal one) so the discussion/proposal/approval boundary is explicit. Do not change application code.
+> Read `https://github.com/jbkunst/mai-principles`, including `AGENTS.template.md`, and apply all five principles to this project's `AGENTS.md` or equivalent. Adapt the near-copyable baseline to existing conventions, preserving useful project rules. Do not change application code.
 
 For a new project:
 
-> Read `https://github.com/jbkunst/mai-principles` and apply its usage instructions to this project. Create minimal project-specific `AGENTS.md` instructions that explicitly distinguish discussion from authorized implementation.
+> Read `https://github.com/jbkunst/mai-principles`, including `AGENTS.template.md`, and create a concise project-specific `AGENTS.md` implementing all five principles. Adapt the baseline to this project's actual stack and workflow.
 
 ## What belongs here
 
@@ -109,7 +112,7 @@ Be direct and respectful. Avoid flattery, congratulations, and patronizing reass
 
 ## Project-specific guidance
 
-The principles are intentionally general. A project's `AGENTS.md` or equivalent should translate them into concrete instructions for that repository.
+The principles are intentionally general. `AGENTS.template.md` is a near-copyable baseline for a project's `AGENTS.md` or equivalent, **not** a file to copy blindly. Adapt all five principles to concrete instructions for that repository; keep local instructions already serving a purpose.
 
 Project-specific instructions should contain what is genuinely local: architecture, domain constraints, commands, validation, data rules, deployment details, coding conventions, and boundaries that cannot be inferred from the project itself.
 
