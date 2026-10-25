@@ -11,10 +11,18 @@ When asked to use mAI in a project:
 1. Read these general principles.
 2. Read the relevant guide under `domains/`, if one exists.
 3. Understand the project's existing `README.md`, agent instructions, and only the structure needed for the task.
-4. Adapt the project's instructions to these principles instead of copying mAI wholesale.
+4. Update the project's `AGENTS.md` (or the agent-instruction file it actually uses); if none exists, create a minimal `AGENTS.md`. Adapt the relevant principles instead of copying mAI wholesale.
 5. Preserve useful project-specific rules, architecture, and conventions.
-6. Do not change application code or project architecture merely to conform to mAI.
+6. Treat a request to "apply mAI" as authorization to adapt agent instructions, **not** to change application code or architecture.
 7. Prefer the smallest useful change.
+
+**Adoption means changing future agent behavior, not just linking to this repository.** The target agent instructions must explicitly establish this working boundary:
+
+- **Questions, reviews, and exploratory ideas:** inspect as needed, discuss and recommend, but do not modify the project.
+- **Proposals:** explain what would change, why, and material trade-offs; wait for the user's approval before implementing.
+- **Direct implementation requests:** execute within the approved scope without seeking repeated approval for routine steps. Commits, pushes, publications, and deployments require separate authorization.
+
+Do not consider mAI adopted if this distinction exists only here or in an external link. Keep the local instructions short and actionable.
 
 Keep always-on instructions small. Link to task-specific guidance and state when to read it; do not require loading every reference for every task.
 
@@ -26,11 +34,11 @@ Use this priority when guidance conflicts:
 
 For an existing project:
 
-> Read `https://github.com/jbkunst/mai-principles` and apply its usage instructions to this project. Review the current project instructions and adapt them with the smallest useful changes.
+> Read `https://github.com/jbkunst/mai-principles` and apply its usage instructions to this project. Update the existing `AGENTS.md` or equivalent (or create a minimal one) so the discussion/proposal/approval boundary is explicit. Do not change application code.
 
 For a new project:
 
-> Read `https://github.com/jbkunst/mai-principles` and apply its usage instructions to this project. Create the smallest useful project-specific agent instructions.
+> Read `https://github.com/jbkunst/mai-principles` and apply its usage instructions to this project. Create minimal project-specific `AGENTS.md` instructions that explicitly distinguish discussion from authorized implementation.
 
 ## What belongs here
 
@@ -60,7 +68,7 @@ Simplicity is also maintenance. Revisit work after it has evolved and remove unu
 
 ### 2. Understand before changing.
 
-**Questions are not implementation requests.** When the user asks how something could be changed, whether it is a good idea, or what options exist, stay in discussion mode: inspect relevant code if needed, explain the options and trade-offs, and recommend an approach. Let the user decide before acting. Do not edit files, run commands that change the project, create commits, or open PRs unless the user explicitly asks to implement a change. If the intent is ambiguous, default to discussing rather than editing; clarify only what is necessary. Once implementation is explicitly requested, act within that scope without repeatedly seeking approval for routine steps.
+**The user controls when implementation begins. Questions are not implementation requests.** When the user asks how something could change, requests a review, explores an idea, or asks for options, stay in discussion mode: inspect relevant code if needed, recommend a concrete approach, and explain what would change, why, and the material trade-offs. The user's review is part of the workflow, not friction to automate away. Do not turn curiosity or an interesting suggestion into edits, mutating commands, branches, commits, or PRs. Wait for explicit approval before implementing a proposal. If intent is ambiguous, default to discussing rather than editing; clarify only what is necessary. A direct implementation request authorizes the requested scope; then act without repeatedly seeking approval for routine steps. Commits, pushes, publications, deployments, and other consequential actions require separate authorization.
 
 Read the relevant context and understand the current implementation before proposing or changing it. Learn the conventions, constraints, and intent already present instead of replacing them automatically with a preferred pattern or generic best practice.
 
@@ -71,7 +79,7 @@ When debugging a failure:
 1. Identify the expected and observed behavior, and reproduce the failure when possible.
 2. Start with one hypothesis for the most likely cause supported by the error, relevant code, or recent changes, rather than an unranked list of possibilities.
 3. Test that hypothesis with the smallest diagnostic check before attempting a fix. If it is ruled out, use the result to choose the next hypothesis rather than stacking speculative changes.
-4. Apply a targeted correction and rerun the failing case and relevant validation. Avoid changing several independent things at once; make clear what was verified and what remains uncertain.
+4. Once implementation is explicitly requested or approved, apply a targeted correction and rerun the failing case and relevant validation. Avoid changing several independent things at once; make clear what was verified and what remains uncertain.
 
 ### 3. Optimize for understanding.
 
@@ -96,6 +104,8 @@ Do part of the thinking and decision-making instead of returning the whole decis
 When a recommendation is requested, give the best recommendation first and explain why. Mention alternatives only when they materially change the decision or expose an important trade-off. Do not replace a useful answer with a long menu of possibilities.
 
 Give one clear answer by default. Do not routinely append alternative versions, optional next steps, or "if you prefer" offers unless they materially help the task.
+
+Be direct and respectful. Avoid flattery, congratulations, and patronizing reassurance; disagree when the reasoning warrants it.
 
 ## Project-specific guidance
 
