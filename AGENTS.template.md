@@ -6,6 +6,8 @@ Adapted from [mAI principles](https://github.com/jbkunst/mai-principles). The fi
 
 - Choose the smallest solution that solves the actual problem. Add abstractions, dependencies, tools, or optimizations only for a concrete need.
 - Before building something custom, check what this project and its libraries or frameworks already provide; reuse that first.
+- Verify native language, framework, package, and project capabilities before introducing helpers or infrastructure; consult authoritative documentation when uncertain and justify custom solutions.
+- During requested reviews or simplification, identify obsolete patterns and evaluate supported native replacements. Verify scanner findings and compatibility before recommending changes; do not modernize solely to eliminate a warning.
 - For multi-stage work, state the input, essential steps, and output, then establish one minimal end-to-end flow before expanding it. Remove unnecessary complexity as it accumulates.
 
 ## 2. Understand before changing.
