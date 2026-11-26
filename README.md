@@ -61,6 +61,8 @@ Begin with the smallest clear solution that solves the actual problem. Add struc
 
 Prefer the existing solution over duplicating it. For example, in a Quarto/Reveal.js presentation, check built-in alignment and layout options before introducing a custom CSS class just to center content. Apply the same test to UI layouts, styling, plots, data transformations, formatting, tests, routing, and other routine tasks. Add custom code only when the available options do not meet the actual requirement, and keep it minimal.
 
+Before introducing a helper, abstraction, dependency, or infrastructure, verify whether the language, framework, existing packages, or project already provide the capability. Consult relevant authoritative documentation when uncertain; explain why a custom solution is necessary rather than assuming it is.
+
 For work spanning multiple stages or components, build one minimal end-to-end flow first:
 
 1. Briefly state the intended input, essential steps, and expected output.
@@ -68,6 +70,8 @@ For work spanning multiple stages or components, build one minimal end-to-end fl
 3. Extend that working flow only as the current task requires; defer extra cases, scale, abstractions, and polish.
 
 Simplicity is also maintenance. Revisit work after it has evolved and remove unused code, obsolete abstractions, unnecessary dependencies, duplicated logic, and structure that no longer earns its place. Prefer simplifying what exists over continually adding more.
+
+When explicitly reviewing or simplifying an existing application, look for obsolete patterns that can be replaced by supported native capabilities. Use focused modernization checks or scanners when relevant, verify findings before recommending changes, and retain compatible fallbacks where needed. A detected legacy pattern is not, by itself, a reason to rewrite it.
 
 ### 2. Understand before changing.
 
