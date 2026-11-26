@@ -11,6 +11,10 @@ Use Shiny and bslib primitives before hand-rolling equivalent behavior.
 - Use companion packages such as DT, reactable, leaflet, plotly, shinychat, reactlog, or shinytest2 when they already solve the problem well.
 - Introduce custom JavaScript, bespoke components, or framework workarounds only when the native or established approach does not meet the actual requirement.
 
+Before adding UI helpers, CSS, JavaScript, or dependencies, check the existing Shiny/bslib APIs and relevant browser-native capabilities. For custom browser code, verify compatibility with the project's supported browsers and introduce fallbacks only when needed.
+
+When asked to review or simplify an app, check for obsolete web patterns and redundant custom code. A focused tool such as [Modern Web Guidance](https://github.com/GoogleChrome/modern-web-guidance) `legacy-scan` can help with web-platform patterns, but it is optional, covers only part of the guidance, and does not audit R/Shiny helpers. Inspect findings and propose changes before editing.
+
 The goal is not to avoid customization. It is to understand and exhaust the intended path before creating another one.
 
 ## Keep a clear hierarchy
